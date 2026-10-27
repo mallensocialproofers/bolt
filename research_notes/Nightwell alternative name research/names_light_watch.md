@@ -118,8 +118,8 @@ Source for all USPTO columns: https://tmsearch.uspto.gov/ backend (queried 2026-
 
 Ranking basis: cleanest registers in target classes, no collision with a food/supplement/tobacco/nicotine brand found, fit with the brief, and fewest implied-claim and slang problems. Evidence is "nothing found by these tools", not "nothing exists".
 
-1. **RUSHLIGHT.** Best brand feel and strongest night-shift heritage (the old night-light candle). Register: no live mark in the target classes, two hits in total. Four of five modifier domains are open. Risk to flag: "rush" reads as an energy rush, so counsel must judge it against the no-implied-energy rule; also rushlight.com is taken and TikTok @rushlight exists.
-2. **LOWLAMP.** Zero marks anywhere near, four of five modifier domains... all five modifier domains open, and the "low" suggests a low, honest 25 mg. Risks: a coined word, awkward to say, thin web footprint (neither good nor bad), a few unpleasant low-evidence UD entries, YouTube @lowlamp exists.
+1. **RUSHLIGHT.** Best brand feel and strongest night-shift heritage (the old night-light candle). Register: no live mark in the target classes, two hits in total. All five modifier domains (get/co/pouches/try/coffee) are open. Risk to flag: "rush" reads as an energy rush, so counsel must judge it against the no-implied-energy rule; also rushlight.com is taken and TikTok @rushlight exists.
+2. **LOWLAMP.** Zero marks anywhere near, all five modifier domains open, and the "low" suggests a low, honest 25 mg. Risks: a coined word, awkward to say, thin web footprint (neither good nor bad), a few unpleasant low-evidence UD entries, YouTube @lowlamp exists.
 3. **STREETLAMP.** Clean in target classes (pending Lemon Inc. marks are games/software, 9/41/42), all five modifier domains open, very strong night imagery. Risks: a plain common noun (weaker mark), STREETLIGHT coffee marks are pending/allowed in class 30, a street-pickup slang sense, streetlamp.com is held.
 
 Not recommended: Wicklight (smoking-accessory "Wick Light" product, crude slang), and the ten rejected names above.
