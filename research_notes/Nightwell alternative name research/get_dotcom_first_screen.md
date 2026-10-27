@@ -26,3 +26,13 @@ Web search (weak): no caffeine, coffee, tea, energy, supplement or nicotine bran
 
 ## For a professional (trademark attorney)
 Full search on the chosen name in classes 5, 29, 30, 31, 32, 34, 35, 43 with phonetic variants and common-law use; the existing social accounts; taglines and packaging for implied claims and nicotine-tin look-alike.
+
+## Second pass after BRIONY was rejected (owner dislikes it), 2026-10-27
+345 more names and words: 121 had a free get<name>.com; USPTO whole-word screen (target classes 5/29/30/31/32/34/43) on all 121. Zero whole-word marks: hadlee, jessamy, kalinda, zaylee, cathleen, dorinda, raelynn, bianka, isolde, lachlan, talulah, heloise, ryleigh, cressida, rosanna, adaline, cecily, cosima, kailey, mireille, rhiannon, alaina, kamila, teagan, mabelle, bernice, fabiola, lainey, leanna, zelie, arianne, eilish, madelyn, annika, annette, ashlyn, antonia, nadine, ensley, raquel, iliana, alyse, monique, brenna, embry, lanie.
+Easy-to-say-and-spell feminine finalists, detail (USPTO live marks any class; RDAP; TikTok/YouTube handle check):
+- CECILY: 5 live marks (CECILY & SAFFRON Class 18/24/25; CECILY DIONNE and CECILY BAUCHMANN Class 41; CECILYARTS Class 20; CECILY CHUDACOFF COUTURE Class 25). Free: getcecily, trycecily, cecilytins, cecilypouches, cecilysociety, cecilyclub, cecilyhq. Taken: cecily.com (exp 2027-07-15), cecilyco.com (registered 2026-05-31). TikTok @cecily 7 followers; YouTube @cecily not found.
+- COSIMA: 5 live marks (COSIMA Class 25 and two Class 35 by Buona Stella IP LLC; COSIMA CLOUD Class 11; CASA COSIMA Class 20). Free: getcosima, trycosima, cosimatins, cosimapouches, cosimasociety, cosimaclub, cosimahq. Taken: cosima.com, cosimaco.com (2022). TikTok @cosima 253 followers; YouTube not found.
+- ADALINE: 5 live marks (none food/supplement; ADALINE CAFE is Class 20 furniture). Free: getadaline, tryadaline, adalinetins, adalinepouches, adalinesociety, adalineclub, adalinehq. adalineco.com expires 2026-11-05. TikTok @adaline 81; YouTube @adaline exists. Spelling variants Adeline/Adaline/Madaline.
+- ROSANNA: 4 live marks (handbags, kitchenware, perfume-type goods). Free: getrosanna and the same set. TikTok @rosanna 580. Older-sounding; Toto song.
+- ANTONIA: 25 live marks any class (none food/supplement/tobacco); TikTok @antonia 1.4M followers (a big account), so weaker.
+- NADINE: 26 live marks any class; NADINE Class 37/42/45; weaker.
