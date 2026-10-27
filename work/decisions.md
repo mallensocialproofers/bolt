@@ -16,3 +16,5 @@ Agents add a line here when a finding needs a decision from the owner. The owner
 | Date | Agent | Finding | Decision needed |
 | --- | --- | --- | --- |
 | 2026-10-27 | research | Name Bolt has conflicts (Gatorade Bolt24, PROBAR Bolt chews, boltpouches.com live, BOLT e-cigarette mark) | Hire a trademark attorney for a clearance search before branding spend |
+| 2026-10-27 | research (competitors_and_dose) | boltpouches.com prices in AED (UAE-oriented), sells 50-200 mg caffeine pouches; lowest US competitor dose found is 50 mg (Nectr, Mojo); 25 mg x 12 = 300 mg/day (75% of FDA 400 mg figure) | Give boltpouches.com owner/jurisdiction to the trademark attorney; decide how daily totals are shown on label (for counsel) |
+| 2026-10-27 | sourcing | Only 5 contract makers publicly list caffeine pouches (JD Quality VA, Daily Manufacturing CA, Global Snus LT, Luna PL, House of Pouches DK); none publish MOQ/price/lead time; certifications unverified; US dietary-supplement vs food status of pouches unconfirmed | Approve sending the draft RFQ (not sent) to shortlisted makers after compliance gate; lawyer to confirm regulatory category before supplier commitments |
