@@ -1158,28 +1158,28 @@ section,row,column,value
 7. Assumptions ranked by how much they move 4-tin first-order contribution (largest swing first),8,Input status,SRC
 7b. Same ranking restricted to uniform +/-20% moves,1,Variable,Retail price/tin
 7b. Same ranking restricted to uniform +/-20% moves,1,Swing (-20% to +20%),$12.16
-7b. Same ranking restricted to uniform +/-20% moves,1,At -20%,-$6.08
-7b. Same ranking restricted to uniform +/-20% moves,1,At +20%,$6.08
-7b. Same ranking restricted to uniform +/-20% moves,2,Variable,Returns/refunds rate (2% scaled)
-7b. Same ranking restricted to uniform +/-20% moves,2,Swing (-20% to +20%),-$0.26
-7b. Same ranking restricted to uniform +/-20% moves,2,At -20%,$0.13
-7b. Same ranking restricted to uniform +/-20% moves,2,At +20%,-$0.13
-7b. Same ranking restricted to uniform +/-20% moves,3,Variable,Processor fees (2.9% and $0.30 scaled together)
-7b. Same ranking restricted to uniform +/-20% moves,3,Swing (-20% to +20%),-$0.49
-7b. Same ranking restricted to uniform +/-20% moves,3,At -20%,$0.25
-7b. Same ranking restricted to uniform +/-20% moves,3,At +20%,-$0.25
+7b. Same ranking restricted to uniform +/-20% moves,1,Change at -20%,-$6.08
+7b. Same ranking restricted to uniform +/-20% moves,1,Change at +20%,$6.08
+7b. Same ranking restricted to uniform +/-20% moves,2,Variable,Supplier price (COGS/tin)
+7b. Same ranking restricted to uniform +/-20% moves,2,Swing (-20% to +20%),$4.00
+7b. Same ranking restricted to uniform +/-20% moves,2,Change at -20%,$2.00
+7b. Same ranking restricted to uniform +/-20% moves,2,Change at +20%,-$2.00
+7b. Same ranking restricted to uniform +/-20% moves,3,Variable,Shipping cost
+7b. Same ranking restricted to uniform +/-20% moves,3,Swing (-20% to +20%),$2.20
+7b. Same ranking restricted to uniform +/-20% moves,3,Change at -20%,$1.10
+7b. Same ranking restricted to uniform +/-20% moves,3,Change at +20%,-$1.10
 7b. Same ranking restricted to uniform +/-20% moves,4,Variable,Pick-pack (ASM)
-7b. Same ranking restricted to uniform +/-20% moves,4,Swing (-20% to +20%),-$1.00
-7b. Same ranking restricted to uniform +/-20% moves,4,At -20%,$0.50
-7b. Same ranking restricted to uniform +/-20% moves,4,At +20%,-$0.50
-7b. Same ranking restricted to uniform +/-20% moves,5,Variable,Shipping cost
-7b. Same ranking restricted to uniform +/-20% moves,5,Swing (-20% to +20%),-$2.20
-7b. Same ranking restricted to uniform +/-20% moves,5,At -20%,$1.10
-7b. Same ranking restricted to uniform +/-20% moves,5,At +20%,-$1.10
-7b. Same ranking restricted to uniform +/-20% moves,6,Variable,Supplier price (COGS/tin)
-7b. Same ranking restricted to uniform +/-20% moves,6,Swing (-20% to +20%),-$4.00
-7b. Same ranking restricted to uniform +/-20% moves,6,At -20%,$2.00
-7b. Same ranking restricted to uniform +/-20% moves,6,At +20%,-$2.00
+7b. Same ranking restricted to uniform +/-20% moves,4,Swing (-20% to +20%),$1.00
+7b. Same ranking restricted to uniform +/-20% moves,4,Change at -20%,$0.50
+7b. Same ranking restricted to uniform +/-20% moves,4,Change at +20%,-$0.50
+7b. Same ranking restricted to uniform +/-20% moves,5,Variable,Processor fees (2.9% and $0.30 scaled together)
+7b. Same ranking restricted to uniform +/-20% moves,5,Swing (-20% to +20%),$0.49
+7b. Same ranking restricted to uniform +/-20% moves,5,Change at -20%,$0.25
+7b. Same ranking restricted to uniform +/-20% moves,5,Change at +20%,-$0.25
+7b. Same ranking restricted to uniform +/-20% moves,6,Variable,Returns/refunds rate (2% scaled)
+7b. Same ranking restricted to uniform +/-20% moves,6,Swing (-20% to +20%),$0.26
+7b. Same ranking restricted to uniform +/-20% moves,6,Change at -20%,$0.13
+7b. Same ranking restricted to uniform +/-20% moves,6,Change at +20%,-$0.13
 8. Go/no-go: what must be true,Blended first-order contribution is positive with 70% of orders at 3-4 tins and 30% at 1 tin,Modelled result,mix contribution at COGS $2.50 = $6.01
 8. Go/no-go: what must be true,Blended first-order contribution is positive with 70% of orders at 3-4 tins and 30% at 1 tin,Threshold / what it needs,max COGS/tin = $4.68
 8. Go/no-go: what must be true,Blended first-order contribution is positive with 70% of orders at 3-4 tins and 30% at 1 tin,Status,PASS at ASM inputs
@@ -1187,7 +1187,7 @@ section,row,column,value
 8. Go/no-go: what must be true,The same mix with 50% of orders at 1 tin,Threshold / what it needs,max COGS/tin = $4.12
 8. Go/no-go: what must be true,The same mix with 50% of orders at 1 tin,Status,PASS
 8. Go/no-go: what must be true,COGS near $2.50 per tin (report threshold),Modelled result,needs supplier quote
-8. Go/no-go: what must be true,COGS near $2.50 per tin (report threshold),Threshold / what it needs,4-tin order breaks even on CM at COGS $5.52; covers $25 CAC in first order at COGS never (even $0 COGS gives $22.09)
+8. Go/no-go: what must be true,COGS near $2.50 per tin (report threshold),Threshold / what it needs,4-tin order breaks even on CM at COGS $5.52; first-order contribution never reaches a $25 CAC (even $0 COGS gives $22.09)
 8. Go/no-go: what must be true,COGS near $2.50 per tin (report threshold),Status,UNKNOWN until quote
 8. Go/no-go: what must be true,"12-month contribution per customer covers a $25 CAC (4-tin bundle, 3 pouches/shift scenario, 8% churn)",Modelled result,$35.58 at COGS $2.50
 8. Go/no-go: what must be true,"12-month contribution per customer covers a $25 CAC (4-tin bundle, 3 pouches/shift scenario, 8% churn)",Threshold / what it needs,max COGS/tin = $3.14
@@ -1201,7 +1201,7 @@ section,row,column,value
 8. Go/no-go: what must be true,No adult signature on delivery,Modelled result,4-tin CM with $10 signature = $2.09; 3-tin = -$3.00
 8. Go/no-go: what must be true,No adult signature on delivery,Threshold / what it needs,needs counsel: is a signature required?
 8. Go/no-go: what must be true,No adult signature on delivery,Status,OPEN (counsel)
-8. Go/no-go: what must be true,"Healthcare discount replaces, never stacks",Modelled result,4-tin reorder $7.53 vs stacked $3.66
+8. Go/no-go: what must be true,"Healthcare discount replaces, never stacks",Modelled result,4-tin reorder $12.28 replaced vs $8.41 stacked (incl. $4.99 customer shipping under $35)
 8. Go/no-go: what must be true,"Healthcare discount replaces, never stacks",Threshold / what it needs,policy decision
 8. Go/no-go: what must be true,"Healthcare discount replaces, never stacks",Status,OWNER DECISION
 8. Go/no-go: what must be true,"Disputes stay under card-network thresholds (Visa monitoring reported 0.9% to 1.5%, conflicting)",Modelled result,each dispute costs $15 plus the order

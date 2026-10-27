@@ -320,7 +320,7 @@ for name, f in (("Supplier price (COGS/tin)", lambda k: dict(cogs=2.50*k)),
     for d in (-0.20, -0.10, 0.10, 0.20):
         v = base_cm_with(**f(1 + d)); vals[d] = v
         rows.append([name, f"{d*100:+.0f}%", money(v), money(v - B), pct(v / (BA*(1+d) if name.startswith("Retail") else BA))])
-    swings.append((name, vals[0.20] - vals[-0.20], vals[-0.20] - B, vals[0.20] - B))
+    swings.append((name, abs(vals[0.20] - vals[-0.20]), vals[-0.20] - B, vals[0.20] - B))
 tbl("6a. Sensitivity of 4-tin first-order contribution (ladder A $7.99/tin, COGS $2.50, ship $5.50, free shipping; base = $12.09 on $31.96 AOV)",
     ["Variable", "Change", "Contribution", "Change vs base", "Contribution % of AOV"], rows,
     "Each variable moved alone by -20%, -10%, +10%, +20%. Positive change in price improves contribution; positive change in the others reduces it.")
@@ -345,9 +345,9 @@ full.sort(key=lambda x: -x[1])
 rows = [[i + 1, n, money(s), f"{s/B*100:.0f}% of base contribution", st] for i, (n, s, st) in enumerate(full)]
 tbl("7. Assumptions ranked by how much they move 4-tin first-order contribution (largest swing first)", ["Rank", "Assumption and range tested", "Swing in contribution", "Relative to base ($12.09)", "Input status"], rows)
 rows = [[i + 1, n, money(s), money(a), money(b)] for i, (n, s, a, b) in enumerate(sorted(swings, key=lambda x: -x[1]))]
-tbl("7b. Same ranking restricted to uniform +/-20% moves", ["Rank", "Variable", "Swing (-20% to +20%)", "At -20%", "At +20%"], rows)
+tbl("7b. Same ranking restricted to uniform +/-20% moves", ["Rank", "Variable", "Swing (-20% to +20%)", "Change at -20%", "Change at +20%"], rows)
 # check ranking two ways: swing sum equals direct difference
-for n, s_, a, b in swings: check(f"swing {n}", s_, (B + b) - (B + a), 1e-9)
+for n, s_, a, b in swings: check(f"swing {n}", s_, abs((B + b) - (B + a)), 1e-9)
 
 # ================= 8. WHAT MUST BE TRUE =================
 def bisect_cogs(target, f):
@@ -365,12 +365,12 @@ def cust12(cg, pps=3, tins=4):
 rows = [
  ["Blended first-order contribution is positive with 70% of orders at 3-4 tins and 30% at 1 tin", f"mix contribution at COGS $2.50 = {money(mix(2.50))}", f"max COGS/tin = {money(bisect_cogs(0, mix))}", "PASS at ASM inputs" if mix(2.50) > 0 else "FAIL"],
  ["The same mix with 50% of orders at 1 tin", f"{money(mix(2.50, 0.5))}", f"max COGS/tin = {money(bisect_cogs(0, lambda c: mix(c, 0.5)))}", "PASS" if mix(2.50, 0.5) > 0 else "FAIL (1-tin share must stay small)"],
- ["COGS near $2.50 per tin (report threshold)", "needs supplier quote", f"4-tin order breaks even on CM at COGS {money(bisect_cogs(0, c4))}; covers $25 CAC in first order at COGS {money(bisect_cogs(25, c4)) if c4(0)>=25 else 'never (even $0 COGS gives '+money(c4(0))+')'}", "UNKNOWN until quote"],
+ ["COGS near $2.50 per tin (report threshold)", "needs supplier quote", f"4-tin order breaks even on CM at COGS {money(bisect_cogs(0, c4))}; first-order contribution never reaches a $25 CAC (even $0 COGS gives {money(c4(0))})", "UNKNOWN until quote"],
  ["12-month contribution per customer covers a $25 CAC (4-tin bundle, 3 pouches/shift scenario, 8% churn)", f"{money(cust12(2.50))} at COGS $2.50", f"max COGS/tin = {money(bisect_cogs(25, cust12))}", "PASS at ASM inputs" if cust12(2.50) >= 25 else "FAIL"],
  ["Same at a $40 CAC", f"{money(cust12(2.50))}", f"max COGS/tin = {money(bisect_cogs(40, cust12)) if cust12(0.0)>=40 else 'not reachable'}", "PASS" if cust12(2.50) >= 40 else "FAIL (needs higher usage or price; usage is not a lever to promote)"],
  ["Shipping near $5.50 per order", "SRC-U pre 2026-07-12; retail zone 1 is $7.90", f"4-tin CM at ship $8.00 = {money(cm(7.99,4,2.5,8.0))}; 3-tin = {money(cm(7.99,3,2.5,8.0))}", "UNKNOWN until 3PL quote and tin weight"],
  ["No adult signature on delivery", f"4-tin CM with $10 signature = {money(cm(7.99,4,2.5,5.5,sig=SIG))}; 3-tin = {money(cm(7.99,3,2.5,5.5,sig=SIG))}", "needs counsel: is a signature required?", "OPEN (counsel)"],
- ["Healthcare discount replaces, never stacks", f"4-tin reorder {money(cm(7.99,4,2.5,5.5,disc=0.15))} vs stacked {money(cm(7.99,4,2.5,5.5,disc=1-0.85*0.85))}", "policy decision", "OWNER DECISION"],
+ ["Healthcare discount replaces, never stacks", f"4-tin reorder {money(cm(7.99,4,2.5,5.5,disc=0.15,ship_rev=4.99))} replaced vs {money(cm(7.99,4,2.5,5.5,disc=1-0.85*0.85,ship_rev=4.99))} stacked (incl. $4.99 customer shipping under $35)", "policy decision", "OWNER DECISION"],
  ["Disputes stay under card-network thresholds (Visa monitoring reported 0.9% to 1.5%, conflicting)", f"each dispute costs ${DISPUTE_FEE:.0f} plus the order", "processor underwriting must accept the category", "UNKNOWN"],
  ["Counsel clearances: trademark (Delphine), regulatory category, label, age policy, adult-signature, state laws", "none recorded in decisions.md", "gate", "NOT CLEARED: no inventory spend"],
  ["Supplier terms: MOQ, deposit, lead time, price breaks", "none exist", f"one 25,000-tin PO is {money(25000*1.5)} to {money(25000*3.5)} at scenario COGS", "UNKNOWN until RFQ (not sent)"],
