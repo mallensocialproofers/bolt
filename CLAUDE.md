@@ -2,6 +2,14 @@
 
 Read this before doing any work. Everything here applies to every agent in this project.
 
+## Direction update (2026-10-27): read this first
+
+The active plan is now **Emmeline**, a subscription skincare line (undereye and face care) for adult women who work overnight shifts as nurses, sold on Shopify with no or very small minimum order quantities (private label, on-demand or dropship). The caffeine pouch line (working name Delphine) is **parked**: unresolved FDA classification, large minimums and ad-platform risk. Everything below that describes caffeine pouches is background for the parked line unless an agent brief says otherwise.
+
+Emmeline facts (2026-10-27, not a clearance): no live or pending EMMELINE mark found in classes 3, 5 or 44; an existing small seller uses EMMELINE SKIN (TikTok @emmelineskin, emmelineskin.com) and counsel must assess it; free domains found: getemmeline.com, emmelineskincare.com, emmelinebeauty.com, emmelineeye.com. See `research_notes/Nightwell alternative name research/screen_emmeline.md`.
+
+House rules for the skincare line (in addition to the rules below): no drug or disease claims (nothing that treats, repairs, cures or prevents; no SPF), no health, fatigue, alertness or sleep claims, no wording that implies the viewer looks tired or has a condition, no before/after that attacks appearance, nothing that appeals to minors, and no nurse-as-expert endorsement. Cosmetics rules (MoCRA, FD&C Act cosmetic vs drug) replace the supplement rules for this line; counsel decides what is safe to say.
+
 ## The business
 
 Delphine sells oral caffeine pouches in the United States, online (Shopify store) and through wholesale. There is one strength: 25 mg of caffeine per pouch, set low so customers can use several pouches a day. Customers are adults only. The owner will set the minimum age (18+ or 21+); until it is recorded in `work/decisions.md`, treat it as 21+ and say so.
