@@ -1,0 +1,43 @@
+input,value,tag,source_checked_2026-10-27
+stripe_card_fee,2.9% + $0.30,SRC,"stripe.com/pricing; shopify.com/pricing (inherited), 2026-10-27"
+refund_rate,2% of revenue,ASM,inherited; no sourced refund rate
+pick_pack_3pl,$2.50/order,ASM,inherited; no 3PL quote
+packaging,mailer $1.00; box $1.50,ASM,no quote
+usps_ground_adv_lt1lb_commercial,$5.50-$8.40,SRC-U,"ship.com/post/cheapest-way-to-ship-a-package-2026 (cites Pirate Ship rate card 30 Jun 2026), checked 2026-10-27"
+usps_ground_adv_1lb_commercial,$7.61-$10.67,SRC-U,same
+printful_socks_shipping_us,$4.69 first +$2.00 each additional; +$0.40 surcharge 15 Oct 2026-17 Jan 2027,SRC,"printful.com/shipping, 2026-10-27"
+printful_sock_base,$7.14 sublimation; $9.06 'from'; $23.36 embroidered SC200,SRC,"printful.com/custom-socks and product pages, 2026-10-27 (page text says from $9.06; sublimation JSON $7.14 - conflict)"
+shopify_subscriptions_app,$0 app fee,SRC-U,"shopify.com/blog/subscription-management-tools, 2026-10-27"
+recharge_starter,$99/mo + 1.49% + $0.19/txn (help centre says 1.25%),SRC-U,getkanal.com/blog/recharge-pricing (updated 2026-10-19)
+loop_starter,"$99/mo + 1.0%, $0/order; free up to 50 subscribers",SRC,"loopwork.co/pricing, 2026-10-27"
+churn_5_8,5%-8% monthly,SRC-U,inherited (vendor blogs)
+churn_10_15_boxes,10%-15% monthly curated boxes; retail subscriptions 5-7%,SRC-U,churnkey.co/blog/the-average-churn-rate-for-subscription-services (updated 2025-06-27)
+wholesale_factor,0.50/0.75/1.00 of retail benchmark,SRC-U/ASM,Faire support: retailers typically 50% margin = 2x wholesale (faire.com/support/articles/360019040531); 0.75 is ASM midpoint
+1a:sublimated/embroidered sock x2,"qty 2, (7.14, 9.06, 23.36)",SRC-U/ASM,"SRC Printful: $7.14 sublimation, $9.06 'from', $23.36 embroidered SC200"
+1a:price,$34.99 first / $34.99 reorder / every 90d,ASM,ASM $34.99; bracketed by Walmart 4-pack $5.50/pair (SRC-U) and Bombas $30.50/pair compression (SRC-U)
+1b:compression sock pair x3,"qty 3, (1.62, 2.99, 3.51)",SRC-U/ASM,"SRC-U eBay retail prices: $1.62 / $2.99 single pairs (CN sellers), $21.03/6 = $3.51 (US seller); NOT wholesale quotes"
+1b:price,$34.99 first / $34.99 reorder / every 90d,ASM,"ASM $34.99 (value claim 3 pairs, below Bombas $91.50 3-pack)"
+2:individually wrapped tea sachet x10,"qty 10, 0.7",SRC-U/ASM,SRC-U Faire Tea with Tae MSRP $0.70/sachet (wholesale price gated)
+2:snack bar x6 (KIND 12ct mixed $1.10/ea),"qty 6, 1.1",SRC-U/ASM,SRC-U walmart.com KIND 12ct $13.22
+2:price,$29.99 first / $29.99 reorder / every 30d,ASM,"ASM $29.99; TheraBox $34.99-39.99/mo (SRC-U), Lady Box from $18 (SRC-U)"
+3:hand cream 3 oz (O'Keeffe's $14.05),"qty 1, 14.05",SRC-U/ASM,SRC-U walmart.com O'Keeffe's Working Hands 3 oz
+3:lip balm (Burt's Bees $3.79),"qty 1, 3.79",SRC-U/ASM,SRC-U shoprite.com Burt's Bees 0.15 oz
+3:price,$19.99 first / $19.99 reorder / every 60d,ASM,ASM $19.99 vs $17.84 retail sum of the two items
+4:foam earplugs x30 pairs (Mack's $14.45/50 pr = $0.289),"qty 30, 0.289",SRC-U/ASM,SRC-U walmart.com/brand/macks (undated snapshot)
+4:eye mask x1 (Faire CALA MSRP $10.00),"qty 1, 10.0",SRC-U/ASM,SRC-U faire.com CALA silk eye mask listing; min order $100
+4:price,$14.99 first / $14.99 reorder / every 60d,ASM,"ASM $14.99; Mack's 50 pair $9.37-$15 (SRC-U), Loop Quiet 2 $24.95 (SRC-U)"
+5:white-label stick x16,"qty 16, (0.4, 0.6, 0.8)",SRC-U/ASM,"ASM placeholders $0.40/0.60/0.80 per stick, NO SOURCE (bounded only by retail: Pedialyte ~$0.59/stick, Liquid I.V. $1.10 (Amazon $17.60/16) to $1.56 ($24.99/16))"
+5:price,$19.99 first / $19.99 reorder / every 30d,ASM,"ASM $19.99; Liquid I.V. 16ct $24.99 (SRC-U cached official page), $17.60 Amazon Feb 2026 (SRC-U)"
+6a:satin scrunchie 5-pack (MSRP $7.99),"qty 1, 7.99",SRC-U/ASM,"SRC-U faire.com Morning Glamour 5pk MSRP $7.99, $0 min"
+6a:price,$12.99 first / $12.99 reorder / every 30d,ASM,ASM $12.99; MSRP $7.00-$7.99 5-packs on Faire (SRC-U)
+6b:POD scrub cap,"qty 1, (15.43, 15.43, 15.43)",SRC-U/ASM,SRC-U ninjaprintondemand WonderWink WW3040 $15.43 (varies by colour/size)
+6b:price,$24.99 first / $24.99 reorder / every 90d,ASM,"ASM $24.99; FIGS caps $18-$22 (SRC wearfigs.com, sold-out page)"
+7:hand cream,"qty 1, 14.05",SRC-U/ASM,SRC-U Walmart O'Keeffe's
+7:lip balm,"qty 1, 3.79",SRC-U/ASM,SRC-U ShopRite Burt's
+7:scrunchie 5pk,"qty 1, 7.99",SRC-U/ASM,SRC-U Faire MSRP
+7:tea sachet x10,"qty 10, 0.7",SRC-U/ASM,SRC-U Faire MSRP
+7:snack bar x4,"qty 4, 1.1",SRC-U/ASM,SRC-U Walmart KIND
+7:price,$34.99 first / $34.99 reorder / every 30d,ASM,ASM $34.99 = bottom of TheraBox $34.99-39.99 (SRC-U)
+8:price,$6.99 first / $6.99 reorder / every 30d,ASM,"ASM $6.99; ONE-TIME nurse planners sell $2.99 / $5.99 / $7 / $9.90 (SRC-U Payhip, Gumroad). No recurring price benchmark found."
+9:20-pouch tin x4,"qty 4, (1.5, 2.5, 3.5)",SRC-U/ASM,ASM COGS placeholders inherited from nurse_economics.py; no supplier quote
+9:price,$31.96 first / $27.17 reorder / every 61.5d,ASM,Inherited: 4 tins x $7.99 ladder A (ASM); 15% subscription discount on reorders (SRC-U Roon)
