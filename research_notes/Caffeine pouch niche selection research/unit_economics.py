@@ -60,17 +60,29 @@ def order_cm(price_tin, tins, cogs_tin, ship, adult_sig=0.0, disc=0.0):
     cm = aov-cogs-fee-refund-ship-PICKPACK-adult_sig
     return aov, cm
 
-def horizon_cm(cm_order, tins, ppd, churn, months):
+SUB_DISC = 0.15   # SRC: Wip 15% subscription (Roon page, UNVERIFIED); Nectr says up to 35%
+
+def horizon_cm(cm_order, tins, ppd, churn, months, cm_reorder=None):
     """expected cumulative CM per acquired customer over `months`.
     Order cadence: a tin lasts POUCHES_PER_TIN/ppd days; an order of `tins` tins lasts tins*that.
     Order 1 at t=0; reorders every cycle while subscribed; monthly survival=(1-churn)."""
     cycle = tins*POUCHES_PER_TIN/ppd
-    total=0.0; t=0.0
+    if cm_reorder is None: cm_reorder = cm_order
+    total=0.0; t=0.0; first=True
     while t < months*DAYS:
         surv=(1-churn)**int(t//DAYS)
-        total+=cm_order*surv
+        total+=(cm_order if first else cm_reorder)*surv
+        first=False
         t+=cycle
     return total
+
+def payback_days(cm1, cm_re, tins, ppd, churn, cac, cap=730):
+    cycle = tins*POUCHES_PER_TIN/ppd; t=0.0; cum=0.0; first=True
+    while t < cap:
+        cum += (cm1 if first else cm_re)*(1-churn)**int(t//DAYS); first=False
+        if cum>=cac: return int(round(t))
+        t+=cycle
+    return None
 
 # ---------- 3. consumption / cadence (pure arithmetic of 20/tin) ----------
 print("\nCADENCE: days per tin (20 pouches)")
@@ -81,21 +93,20 @@ for ppd in (3,4,6,8,10,12):
 out=[]
 hdr=["tin_price","tins_per_order","aov","cogs_tin","ship","pouches_day","mg_day","days_between_orders","cm_first_order","cm_pct_aov",
      "breakeven_cac_first_order","breakeven_cac_90d_churn8","breakeven_cac_180d_churn8","breakeven_cac_365d_churn8",
-     "breakeven_cac_365d_churn5","breakeven_cac_365d_churn12","roas3_implied_cac","payback_months_at_cac_cm_x1"]
+     "breakeven_cac_365d_churn5","breakeven_cac_365d_churn12","roas3_implied_cac","payback_days_cac25_churn8","payback_days_cac40_churn8","payback_days_cac60_churn8","cm_reorder_sub15"]
 for price,cogs,ship in itertools.product(TIN_PRICES,COGS_TIN,SHIP):
   for tins in (1,2,3,5):
     for ppd in (3,4,6,8,10,12):
         aov,cm=order_cm(price,tins,cogs,ship)
+        _,cm_re=order_cm(price,tins,cogs,ship,disc=SUB_DISC)
         cyc=tins*POUCHES_PER_TIN/ppd
         be1=cm
-        h=lambda ch,mo: horizon_cm(cm,tins,ppd,ch,mo)
+        h=lambda ch,mo: horizon_cm(cm,tins,ppd,ch,mo,cm_re)
         # payback: months until cumulative CM >= CAC where CAC = AOV/ROAS(3.0); churn 8%
         cac=aov/3.0
-        pb=""
-        for mo in range(0,37):
-            if horizon_cm(cm,tins,ppd,0.08,max(mo,0.0001))>=cac: pb=mo if mo>0 else 0; break
+        pb=[payback_days(cm,cm_re,tins,ppd,0.08,c) for c in (25,40,60)]
         out.append([price,tins,round(aov,2),cogs,ship,ppd,ppd*25,round(cyc,1),round(cm,2),round(cm/aov*100,1),
-            round(be1,2),round(h(.08,3),2),round(h(.08,6),2),round(h(.08,12),2),round(h(.05,12),2),round(h(.12,12),2),round(cac,2),pb])
+            round(be1,2),round(h(.08,3),2),round(h(.08,6),2),round(h(.08,12),2),round(h(.05,12),2),round(h(.12,12),2),round(cac,2),*pb,round(cm_re,2)])
 with open(STEM+"_model.csv","w",newline="") as f:
     w=csv.writer(f); w.writerow(hdr); w.writerows(out)
 print(f"\nwrote {len(out)} scenario rows")
@@ -103,10 +114,10 @@ print(f"\nwrote {len(out)} scenario rows")
 # printed digest: mid COGS 2.50, ship 5.50 and 8.00 for 8.99
 def show(price,cogs,ship):
     print(f"\n--- tin ${price}, COGS ${cogs}/tin (ASSUMPTION), ship ${ship}, pick-pack ${PICKPACK} (ASSUMPTION) ---")
-    print("tins AOV   CM1   CM%  | ppd mg  days/order | BE-CAC 1st  90d@8%  180d@8%  365d@8%  365d@5%  365d@12% | CAC@ROAS3  payback(mo)")
+    print("tins AOV   CM1   CM%  | ppd mg  days/order | BE-CAC 1st  90d@8%  180d@8%  365d@8%  365d@5%  365d@12% | CAC@ROAS3 | payback days @CAC $25/$40/$60 (8% churn; None=>never in 24 mo)")
     for r in out:
         if r[0]==price and r[3]==cogs and r[4]==ship and r[5] in (3,6,10):
-            print(f"{r[1]:>4} {r[2]:>6} {r[8]:>5} {r[9]:>5}| {r[5]:>3} {r[6]:>3} {r[7]:>6}     | {r[10]:>8} {r[11]:>7} {r[12]:>8} {r[13]:>8} {r[14]:>8} {r[15]:>8} | {r[16]:>7} {str(r[17]):>6}")
+            print(f"{r[1]:>4} {r[2]:>6} {r[8]:>5} {r[9]:>5}| {r[5]:>3} {r[6]:>3} {r[7]:>6}     | {r[10]:>8} {r[11]:>7} {r[12]:>8} {r[13]:>8} {r[14]:>8} {r[15]:>8} | {r[16]:>7} | {r[17]} / {r[18]} / {r[19]}")
 for ship in SHIP: show(8.99,2.50,ship)
 show(5.99,2.50,5.50); show(10.99,2.50,5.50); show(8.99,1.50,5.50); show(8.99,3.50,5.50)
 
