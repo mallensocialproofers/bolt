@@ -1,0 +1,21 @@
+brand,pack,price_usd,tins,pouches_per_tin,mg_per_pouch,usd_per_pouch,usd_per_100mg,source_note
+Nectr Energy,site 4-pack (inferred),32.99,4,20,50,0.412,0.825,nectr.energy 2026-10-27; 4 tins inferred from Roon $8.25/tin
+Nectr Focus+,site 5-pack (inferred),39.99,5,20,50,0.4,0.8,nectr.energy; Roon $8.00 in 5-pack
+Nectr Zero,site 4-pack (inferred),29.99,4,20,0,0.375,,caffeine-free; excluded from per-100mg
+Nectr Energy,single tin,10.99,1,20,50,0.549,1.099,"Roon takeroon.com cheapest-nootropic page, 'early 2026'"
+Nectr Focus+,single tin,11.99,1,20,50,0.6,1.199,same
+Roon,one-time tin,15.0,1,15,80,1.0,1.25,takeroon.com 2026-10-27 / Roon page
+Roon,subscription tin,9.16,1,15,80,0.611,0.763,takeroon.com '$9.16/tin' 12-tin plan
+Wip 100mg,3-can Walmart,21.99,3,15,100,0.489,0.489,Walmart listing via search; Roon $0.489
+Wip 200mg,3-can,24.99,3,15,200,0.555,0.278,Roon table; UNVERIFIED
+Wip,SRP per can,5.99,1,10,100,0.599,0.599,Prepared Foods/Webull: $5.99 per 10-pouch can (launch; mg not stated)
+Mojo 50mg,single,7.99,1,15,50,0.533,1.065,Roon table; UNVERIFIED
+Mojo 100mg,single,8.99,1,15,100,0.599,0.599,Roon table; UNVERIFIED
+Ultra Focus (0 mg caff.),can,16.0,1,15,0,1.067,,Roon; no caffeine - excluded
+Grinds 25mg,can,5.95,1,18,25,0.331,1.322,Roon table; Walmart lists 15/18/20 per can - UNVERIFIED count
+Grinds 25mg,can (alt),5.99,1,18,25,0.333,1.331,Roon cheapest-per-serving page
+NZE 50mg,5-pack,34.99,5,15,50,0.467,0.933,Roon table; nzepouches per search
+Bucked Up PWR Buck,tin,8.99,1,20,50,0.45,0.899,"living.fit retailer page (search), sold out"
+Bucked Up PWR Buck,"tin, buy 3+",8.09,1,20,50,0.404,0.809,living.fit retailer tier
+Plopii Focus (paraxanthine),can,9.99,1,20,0,0.499,,"launch price, Roon review; not caffeine"
+Wild Pouches,5 cans,39.96,5,20,60,0.4,0.666,wild-pouches.com/pages/lp-buy-box-v9 (20% off $49.95); 60 or 120 mg; mg of this pack not stated
