@@ -1,10 +1,10 @@
-# Bolt: company context for every agent
+# Delphine: company context for every agent
 
 Read this before doing any work. Everything here applies to every agent in this project.
 
 ## The business
 
-Bolt sells oral caffeine pouches in the United States, online (Shopify store) and through wholesale. There is one strength: 25 mg of caffeine per pouch, set low so customers can use several pouches a day. Customers are adults only. The owner will set the minimum age (18+ or 21+); until it is recorded in `work/decisions.md`, treat it as 21+ and say so.
+Delphine sells oral caffeine pouches in the United States, online (Shopify store) and through wholesale. There is one strength: 25 mg of caffeine per pouch, set low so customers can use several pouches a day. Customers are adults only. The owner will set the minimum age (18+ or 21+); until it is recorded in `work/decisions.md`, treat it as 21+ and say so.
 
 The owner is the only decision-maker. Agents research, draft, compare and calculate. The owner approves.
 
@@ -24,21 +24,21 @@ The owner is the only decision-maker. Agents research, draft, compare and calcul
 Treat these as starting points to verify, not conclusions.
 
 - A 2025 trade explainer says caffeine pouches are sold in the US as dietary supplements with no federal minimum age, citing FDA's 2018 guidance on highly concentrated caffeine and a 400 mg per day reference for healthy adults (https://tobaccoinsider.com/caffeine-pouches-questions-and-answers/). This is a trade site, not FDA.
-- FDA is considering guidance on labeling caffeine content in foods and beverages, on its 2026 priority list with no date (https://www.fooddive.com/news/caffeine-labeling-fda-guidance-celsius-alani-nu/824355/). Bolt prints caffeine per pouch regardless.
+- FDA is considering guidance on labeling caffeine content in foods and beverages, on its 2026 priority list with no date (https://www.fooddive.com/news/caffeine-labeling-fda-guidance-celsius-alani-nu/824355/). Delphine prints caffeine per pouch regardless.
 - State-level laws for caffeine pouches, ad-platform rules and payment-processor rules have NOT been researched yet.
-- Name risk for "Bolt": research found a Gatorade product line called Bolt24 (including a caffeinated version), PROBAR "Bolt" energy chews, a live site at boltpouches.com selling "BOLT Energy Pouches" (owner not identified), caffeine products named Jolt and Volt, and a registered BOLT mark for e-cigarettes. USPTO's own search could not be accessed, so none of this is a clearance search. A trademark attorney must clear the name before major branding spend.
+- Name: the brand was first called Bolt and dropped (live BOLT registrations and a BOLT caffeine pouch seller). The owner chose Delphine on 2026-10-27. A screen of USPTO search data (not a clearance) found no live or pending DELPHINE mark in classes 5, 29, 30, 31, 32, 34 or 43; live DELPHINE marks exist in restaurants (Class 43), clothing (25/35), tax consulting, real estate, cosmetics and jewelry; neighbors to ask counsel about are DELPHINOL (Class 5 pharmaceutical), DELFINA (Class 43 and others) and SANTA DELFINA (Class 32). getdelphine.com and delphinetins.com, delphinepouches.com, delphinesociety.com, delphineclub.com are unregistered; delphine.com and delphineco.com are taken. See `research_notes/Nightwell alternative name research/screen_delphine.md`. A trademark attorney must clear the name before major branding spend.
 - Because 25 mg pouches invite several uses a day, 12 pouches is 300 mg. Labeling must make daily totals clear, and the wording is for counsel to approve.
 
 ## Marketing content
 
-Marketing content for Bolt (images, video, captions, copy) is drafted through the content studio (`mallensocialproofers/my-content-studio`). That repo is a production tool only. Bolt's brief, rules and files live here.
+Marketing content for Delphine (images, video, captions, copy) is drafted through the content studio (`mallensocialproofers/my-content-studio`). That repo is a production tool only. Delphine's brief, rules and files live here.
 
 1. The studio drafts and generates. Nothing is posted, scheduled, sent or published automatically. The studio can post to social accounts and send through Blotato, so every post or send needs the owner's explicit approval at that moment. Studio rules such as "log to Airtable" or "schedule the next slot" never override this.
 2. Every piece goes to `label-claims-reviewer` before the owner sees it, and the review is saved in `work/label-claims-reviewer/`.
 3. Content is for adults only. Use the age policy in `work/decisions.md`; until it is recorded, treat it as 21+ and say so.
 4. No health, performance or nicotine-related claims, and no content, slang, imagery or channels that appeal to minors.
 5. Do not carry over other brands' characters, hosts, voices, accounts or standing defaults from the studio.
-6. Do not publish much under the Bolt name until the trademark question in `work/decisions.md` is settled.
+6. Do not publish much under the Delphine name until the trademark question in `work/decisions.md` is settled.
 
 ## Project phases
 

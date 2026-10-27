@@ -1,4 +1,4 @@
-# Bolt agent team for Claude Code
+# Delphine agent team for Claude Code
 
 This folder holds six Claude Code agents and a shared company brief.
 
@@ -39,5 +39,5 @@ Starter prompts, in order:
 
 - Agents draft; you decide and send. Nothing goes out under your name unreviewed.
 - Anything under "For a professional" in an output goes to a lawyer, accountant or insurance broker.
-- Get the name Bolt cleared by a trademark attorney before major branding spend.
+- Get the name Delphine cleared by a trademark attorney before major branding spend.
 - Do not spend on inventory, branding or ads until you have cleared the compliance gate and recorded it in `work/decisions.md`.
