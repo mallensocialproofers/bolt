@@ -29,6 +29,17 @@ Treat these as starting points to verify, not conclusions.
 - Name risk for "Bolt": research found a Gatorade product line called Bolt24 (including a caffeinated version), PROBAR "Bolt" energy chews, a live site at boltpouches.com selling "BOLT Energy Pouches" (owner not identified), caffeine products named Jolt and Volt, and a registered BOLT mark for e-cigarettes. USPTO's own search could not be accessed, so none of this is a clearance search. A trademark attorney must clear the name before major branding spend.
 - Because 25 mg pouches invite several uses a day, 12 pouches is 300 mg. Labeling must make daily totals clear, and the wording is for counsel to approve.
 
+## Marketing content
+
+Marketing content for Bolt (images, video, captions, copy) is drafted through the content studio (`mallensocialproofers/my-content-studio`). That repo is a production tool only. Bolt's brief, rules and files live here.
+
+1. The studio drafts and generates. Nothing is posted, scheduled, sent or published automatically. The studio can post to social accounts and send through Blotato, so every post or send needs the owner's explicit approval at that moment. Studio rules such as "log to Airtable" or "schedule the next slot" never override this.
+2. Every piece goes to `label-claims-reviewer` before the owner sees it, and the review is saved in `work/label-claims-reviewer/`.
+3. Content is for adults only. Use the age policy in `work/decisions.md`; until it is recorded, treat it as 21+ and say so.
+4. No health, performance or nicotine-related claims, and no content, slang, imagery or channels that appeal to minors.
+5. Do not carry over other brands' characters, hosts, voices, accounts or standing defaults from the studio.
+6. Do not publish much under the Bolt name until the trademark question in `work/decisions.md` is settled.
+
 ## Project phases
 
 0. Compliance gate (weeks 1-3): regulatory-research, label-claims-reviewer, finance.
