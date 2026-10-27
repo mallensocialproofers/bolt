@@ -138,3 +138,14 @@ for msrp in (7.99,8.99,10.99):
             print(f"  MSRP {msrp} {lab:14s} dist {int(dm*100):>2}%: retailer pays ${cost:5.2f}, brand net ${net:5.2f}, CM/tin at COGS 1.50/2.50/3.50 = {cms}")
 with open(os.path.join(HERE,"nurse_wholesale_gift.csv"),"w",newline="") as f:
     w=csv.writer(f); w.writerow(["msrp","retailer_markup_on_cost","distributor_pct","retailer_cost","brand_net","cm_cogs1.50","cm_cogs2.50","cm_cogs3.50"]); w.writerows(wr)
+
+# ---------- H. free-shipping-for-all vs threshold, ladder A, COGS 2.50, ship 5.50 ----------
+print("\nH. FIRST-ORDER CM, ladder A, COGS 2.50, ship cost 5.50: shipping free for all vs customer pays $4.99 below $35 vs threshold $30")
+for tins,p in LADDERS["A_anchor_8.99"].items():
+    aov0=p*tins
+    free=cm_order(p,tins,2.5,5.5)[1]
+    t35=cm_order(p,tins,2.5,5.5,ship_rev=0.0 if aov0>=35 else CUST_SHIP)[1]
+    t30=cm_order(p,tins,2.5,5.5,ship_rev=0.0 if aov0>=30 else CUST_SHIP)[1]
+    print(f"  {tins} tins AOV ${aov0:6.2f}: free-all {free:6.2f} | $35 threshold {t35:6.2f} | $30 threshold {t30:6.2f}")
+print("  COGS 3.50 / ship 8.00 worst case, free-all:", {t:round(cm_order(p,t,3.5,8.0)[1],2) for t,p in LADDERS["A_anchor_8.99"].items()})
+print("  Healthcare discount cost per first order on 4 tins (free ship, COGS 2.50):", {int(h*100):round(cm_order(7.99,4,2.5,5.5)[1]-cm_order(7.99,4,2.5,5.5,disc=h)[1],2) for h in (0.1,0.15,0.2)})
